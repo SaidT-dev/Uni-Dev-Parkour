@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": ".";
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"stdbool.h": "c",
+			"stdio.h": "c",
+			"stdlib.h": "c"
+		}
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": []
+	}
+}

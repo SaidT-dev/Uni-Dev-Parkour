@@ -1,0 +1,8 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "editor.inlineSuggest.showToolbar": "onHover",
+    "files.associations": {
+        "random": "c",
+        "*.tcc": "c"
+    }
+}
