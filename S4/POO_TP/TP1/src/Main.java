@@ -16,7 +16,7 @@ public class Main {
         System.out.println(e + " ou " + f + " = " + (e || f));
         System.out.println(e + " et " + f + " = " + (e && f));*/
 
-        System.out.println("\n***********EX03***********");
+        /*System.out.println("\n***********EX03***********");
         int nbr = 0;
         int diff = 0;
         while (true){
@@ -33,12 +33,12 @@ public class Main {
                 sommeDiv += i;
             }
         }
-        System.out.println("La somme des diviseurs de " + diff + ": " + sommeDiv);
+        System.out.println("La somme des diviseurs de " + diff + ": " + sommeDiv);*/
 
         /*System.out.println("\n***********EX04***********");
         int choix = 0;
         System.out.print("Choisi la couleur de feu (1-Rouge / 2-Orange / 3-Vert): ");
-        choix = sc.nextInt().toLowerCase;
+        choix = sc.nextInt();
         switch (choix) {
             case 1 -> System.out.println("STOP!");
             case 2 -> System.out.println("Prepare toi a arrete");
@@ -46,7 +46,7 @@ public class Main {
             default -> System.out.println("Feu inconnu");
         }*/
 
-        /*System.out.println("\n***********EX05***********");
+        System.out.println("\n***********EX05***********");
         //Creation de instance Etudiant
         Etudiant E1 = new Etudiant("Lamine", 20, 10.1);
         Etudiant E2 = new Etudiant("LB", 25, 15.2);
@@ -61,7 +61,7 @@ public class Main {
         E1.afficherInfo();
 
         System.out.println("\n***********EX06***********");
-        TestCompteBancaire test = new TestCompteBancaire();*/
+        TestCompteBancaire test = new TestCompteBancaire();
 
         /*System.out.println("\n***********EX07***********");
         int[] tab = {7,2,9,2,6,10,2,8,10,13,9,2,9,20,15};

@@ -16,6 +16,7 @@ class Etudiant {
     }
 
     void augmenterMoyenne(double valeur){
+
         moyenne += valeur;
     }
 }
