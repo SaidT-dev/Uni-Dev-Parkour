@@ -16,24 +16,42 @@ public class Main {
         System.out.println(e + " ou " + f + " = " + (e || f));
         System.out.println(e + " et " + f + " = " + (e && f));*/
 
-        /*System.out.println("\n***********EX03***********");
+        System.out.println("\n***********EX03***********");
         int nbr = 0;
-        int diff = 0;
+        int D = 0;
         while (true){
             System.out.print("Veuilliez introduire un nbr: ");
             nbr = sc.nextInt();
             if(nbr > 1000 && nbr % 2 == 0){
-                diff = nbr - 1000;
+                D = nbr - 1000;
                 break;
             }
         }
-        int sommeDiv = 0;
-        for(int i = 1; i <= diff / 2; i++){
-            if(diff % i == 0){
+
+        System.out.println("La diffirence par rapport a 1000 est: " + D);
+
+        int sommeDiv = D;
+        int max = 0;
+        int min = 0;
+
+        // Trouver le plus petit diviseur de D (hormis 1)
+        for(int i = 2; i <= D / 2; i++){
+            if(D % i == 0){
+                min = i;
+                break; // On sort de la boucle dès qu'on trouve le premier diviseur
+            }
+        }
+        for(int i = 1; i <= D / 2; i++){
+            if(D % i == 0){
+                max = i;
                 sommeDiv += i;
             }
         }
-        System.out.println("La somme des diviseurs de " + diff + ": " + sommeDiv);*/
+        System.out.println("La somme des diviseurs de " + D + ": " + sommeDiv);
+        System.out.println("Le plus grand diviseur de " + D + " est " + max);
+        System.out.println("Le plus petit diviseur de " + D + " (hormis 1) est " + min);
+
+
 
         /*System.out.println("\n***********EX04***********");
         int choix = 0;
@@ -46,7 +64,7 @@ public class Main {
             default -> System.out.println("Feu inconnu");
         }*/
 
-        System.out.println("\n***********EX05***********");
+        /*System.out.println("\n***********EX05***********");
         //Creation de instance Etudiant
         Etudiant E1 = new Etudiant("Lamine", 20, 10.1);
         Etudiant E2 = new Etudiant("LB", 25, 15.2);
@@ -61,7 +79,7 @@ public class Main {
         E1.afficherInfo();
 
         System.out.println("\n***********EX06***********");
-        TestCompteBancaire test = new TestCompteBancaire();
+        TestCompteBancaire test = new TestCompteBancaire();*/
 
         /*System.out.println("\n***********EX07***********");
         int[] tab = {7,2,9,2,6,10,2,8,10,13,9,2,9,20,15};
