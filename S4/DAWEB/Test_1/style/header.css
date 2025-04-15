@@ -1,0 +1,79 @@
+/* General Reset */
+* {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #18191f;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4caf50;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #f5f7fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+/* Navigation */
+nav > ul {
+    display: flex;
+    gap: 1.5em;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav > ul > li {
+    padding: 0.5em 0;
+}
+
+/* Buttons */
+button {
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.login {
+    color: #4caf50;
+    background-color: white;
+    border: 2px solid #4caf50;
+}
+
+.login:hover {
+    background-color: #4caf50;
+    color: white;
+}
+
+.sign {
+    color: white;
+    background-color: #4caf50;
+    border: 2px solid #4caf50;
+}
+
+.sign:hover {
+    background-color: #45a049;
+}

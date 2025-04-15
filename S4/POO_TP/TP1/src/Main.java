@@ -16,7 +16,7 @@ public class Main {
         System.out.println(e + " ou " + f + " = " + (e || f));
         System.out.println(e + " et " + f + " = " + (e && f));*/
 
-        System.out.println("\n***********EX03***********");
+        /*System.out.println("\n***********EX03***********");
         int nbr = 0;
         int D = 0;
         while (true){
@@ -49,9 +49,7 @@ public class Main {
         }
         System.out.println("La somme des diviseurs de " + D + ": " + sommeDiv);
         System.out.println("Le plus grand diviseur de " + D + " est " + max);
-        System.out.println("Le plus petit diviseur de " + D + " (hormis 1) est " + min);
-
-
+        System.out.println("Le plus petit diviseur de " + D + " (hormis 1) est " + min);*/
 
         /*System.out.println("\n***********EX04***********");
         int choix = 0;
@@ -79,7 +77,7 @@ public class Main {
         E1.afficherInfo();
 
         System.out.println("\n***********EX06***********");
-        TestCompteBancaire test = new TestCompteBancaire();*/
+        TestCompteBancaire test = new TestCompteBancaire();
 
         /*System.out.println("\n***********EX07***********");
         int[] tab = {7,2,9,2,6,10,2,8,10,13,9,2,9,20,15};
@@ -94,12 +92,12 @@ public class Main {
 
         System.out.println("Le nomre des ocurences de " + rech + " est: " + occ);*/
 
-        /*System.out.println("\n***********EX08***********");
+        System.out.println("\n***********EX08***********");
         double[] nombres = new double[10];
         double sum = 0;
         double moyenne = 0;
+        System.out.print("Entrer 10 nombres: ");
         for(int i = 0; i < nombres.length; i++){
-            System.out.print("Entrer le nombre " + (i+1) + ": ");
             nombres[i] = sc.nextDouble();
             sum += nombres[i];
         }
@@ -111,9 +109,6 @@ public class Main {
         }
         moyenne = sum / nombres.length;
         System.out.println("La moyenne des element des nombre entree est: " + moyenne);
-        System.out.println("le min est: " + min);*/
-
-//        System.out.println("\n***********EX Supp***********");
-
+        System.out.println("le min est: " + min);
     }
 }

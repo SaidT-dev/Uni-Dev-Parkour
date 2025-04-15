@@ -1,0 +1,50 @@
+header {
+    background-color: lightgrey;
+    padding: 20px;
+    border: 1px solid black;
+    font-family: sans-serif;
+    font-size: 2em;
+}
+
+nav {
+    float: left;
+    border: 1px solid black;
+    height: 500px;
+    background-color: whitesmoke;
+    padding: 30px;
+}
+
+nav > ul > li {
+    text-decoration: none;
+    list-style: none;
+}
+
+nav > ul > li :hover {
+    color: magenta;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+aside {
+    font-weight: normal;
+    float: right;
+    border: 1px solid black;
+    width: 150px;
+    height: 500px;
+    color: rgb(255, 0, 255);
+}
+
+section {
+    width: 75%;
+}
+footer {
+    font-family: sans-serif;
+    font-size: 0.9em;
+    clear: both;
+    background-color: dimgrey;
+    color: white;
+    height: 50px;
+}
