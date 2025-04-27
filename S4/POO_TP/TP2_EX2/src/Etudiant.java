@@ -22,6 +22,10 @@ public class Etudiant {
      }
 
      public void setNoteMoyenne(double moyenne){
-        this.moyenne = moyenne;
+         if(moyenne < 0 || moyenne > 20){
+             System.out.println("La moyenne dois etre comprise entrer 0 et 20");
+         } else {
+             this.moyenne = moyenne;
+         }
      }
 }
