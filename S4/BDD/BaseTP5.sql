@@ -126,23 +126,82 @@ INSERT INTO PROJECTION (idCinema, idFilm, jour) VALUES
 (1, 3, '1994-03-02'),
 (2, 10, '2000-10-03');
 
+-- QST4
 SELECT * FROM FILM;
 
-SELECT titre AS 'Titre de Film' FROM FILM;
+-- QST5
+SELECT titre AS "Titre de film" FROM FILM;
 
+-- QST6
 SELECT * FROM FILM WHERE genre = 'Drame';
 
-SELECT * FROM FILM WHERE genre = 'Drame' ORDER BY titre ASC;
+-- QST8
+SELECT DISTINCT PROJECTION.idFilm
+FROM projection,cinema 
+WHERE nom = 'le fontenelle' AND
+projection.idCinema = CINEMA.idCinema;
 
-SELECT PROJECTION.idFilm
-FROM PROJECTION, cinema
-WHERE nom = 'le Fontenelle' AND 
-PROJECTION.idCinema = CINEMA.idCinema;
+-- QST9
+SELECT DISTINCT FILM.idFilm, Film.titre
+FROM projection, cinema, film
+WHERE cinema.nom = 'Le fontenelle' AND
+projection.idCinema = cinema.idCinema AND
+projection.idFilm = film.idFilm;
 
-SELECT FILM.idFilm, FILM.titre
-FROM PROJECTION, CINEMA, film
-WHERE CINEMA.nom = 'le fontenelle' AND
-PROJECTION.idCinema = CINEMA.idCinema AND
-PROJECTION.idFilm = FILM.idFilm;
+-- QST10
+SELECT DISTINCT nom FROM personne
+ORDER BY nom ASC;
 
-SELECT nom FROM personne D
+-- QST11
+SELECT film.idFilm, film.titre
+FROM projection, film
+WHERE YEAR(projection.jour) = 2002 AND
+projection.idFilm = film.idFilm;
+
+-- QST12
+SELECT personne.nom , personne.idPersonne
+FROM personne,jouer WHERE
+personne.idPersonne = jouer.idActeur;
+
+-- QST13
+SELECT DISTINCT personne.nom , personne.prenom
+FROM personne,Film WHERE
+personne.idPersonne = film.idRealisateur;
+
+-- QST14
+SELECT prenom FROM personne WHERE prenom LIKE '%s%';
+
+-- QST15
+SELECT titre
+FROM personne,Film WHERE
+personne.nom = 'Von' AND personne.prenom = 'Trier' AND
+personne.idPersonne = film.idRealisateur;
+
+-- QST16
+SELECT * from personne
+WHERE idPersonne NOT IN
+    (SELECT idActeur FROM jouer)
+
+-- QST17
+SELECT DISTINCT personne.idPersonne, personne.nom, personne.prenom
+FROM personne,Film,jouer WHERE
+personne.idPersonne = film.idRealisateur AND
+personne.idPersonne = jouer.idActeur;
+
+-- QST18
+SELECT personne.idPersonne, personne.nom, personne.prenom
+FROM personne, jouer, projection, cinema WHERE
+personne.idPersonne = jouer.idActeur AND
+jouer.idFilm = projection.idFilm AND
+YEAR(projection.jour) >= 2002 AND
+projection.idCinema = cinema.idCinema AND
+cinema.nom = 'le Fontenelle';
+
+-- QST19
+SELECT DISTINCT film.idFilm, film.titre
+FROM personne, jouer, projection, cinema,film WHERE
+personne.nom = 'Kidmane' AND personne.prenom = 'Nicole' AND
+personne.idPersonne = jouer.idActeur AND
+jouer.idFilm = projection.idFilm AND
+projection.idCinema = cinema.idCinema AND
+cinema.nom = 'le Fontenelle';
