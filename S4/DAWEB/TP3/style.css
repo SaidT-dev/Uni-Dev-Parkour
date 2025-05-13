@@ -1,0 +1,7 @@
+.contenuErrone {
+    border: 5px solid red;
+}
+
+.contenuCorrect {
+    border: 5px solid rgb(2, 196, 2);
+}

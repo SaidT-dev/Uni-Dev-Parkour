@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <form action="code.php" method="get">
+            <h2>Incrivez vous</h2>
+            <div>
+                <label for="name">Nom:</label>
+                <input type="text" name="name" id="name" required />
+            </div>
+            <div>
+                <label for="pwd1"> Mot de passe : </label>
+                <input type="password" oninput="checkPasswords()" id="pwd1"
+                name="pwd1" "/>
+            </div>
+            <div>
+                <label for="pwd2"> Confirmez mot de passe :</label>
+                <input type="password" oninput="checkPasswords()" id="pwd2" />
+            </div>
+            <div>
+                <button type="submit">Envoyer</button>
+                <button type="reset">Effacer</button>
+            </div>
+        </form>
+        <script src="./mesFonction.js"></script>
+    </body>
+</html>

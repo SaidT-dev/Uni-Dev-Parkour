@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulaires</title>
+        <style>
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" method="post">
+            <fieldset>
+                <legend>Information personnelles</legend>
+                <div>
+                    <label for="Nom">Nom</label>
+                    <input
+                        type="text"
+                        name="Nom"
+                        placeholder="Entrer votre nom"
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label for="Prenom">Prenom</label>
+                    <input
+                        type="text"
+                        name="Prenom"
+                        placeholder="Entrer votre prenom"
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label for="wilaya">Wilaya</label>
+                    <select name="wilaya" required>
+                        <option value="" disabled selected>
+                            -- Sélectionnez une wilaya --
+                        </option>
+                        <option value="1">Adrar</option>
+                        <option value="2">Chlef</option>
+                        <option value="3">Laghouat</option>
+                        <option value="4">Oum El Bouaghi</option>
+                        <option value="5">Batna</option>
+                        <option value="6">Béjaïa</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="M">M.</label>
+                    <input type="radio" name="M" />
+
+                    <label for="Mlle">Mlle.</label>
+                    <input type="radio" name="Mlle" />
+
+                    <label for="Mme">Mme.</label>
+                    <input type="radio" name="Mme" />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Information de contact</legend>
+                <div>
+                    <label for="NumeroTel">Numero</label>
+                    <input
+                        type="tel"
+                        pattern="[0]{1} [6,5,7]{1}-[0-9]{8}"
+                        name="NumeroTel"
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label for="monemail">Email</label>
+                    <input type="email" name="monemail" required />
+                </div>
+
+                <div>
+                    <input type="checkbox" name="check" required />
+                    <label for="check">
+                        Je souhaite être appelé à son numéro pour me répondre
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Details de la requete</legend>
+                <div>
+                    <label for="macouleur">Couleur</label>
+                    <input type="color" name="macouleur" required />
+                </div>
+
+                <div>
+                    <label for="Age">Age</label>
+                    <input type="number" name="Age" step="1" min="0" required />
+                </div>
+
+                <div>
+                    <label for="photo">Photo</label>
+                    <input type="file" name="photo" required />
+                </div>
+            </fieldset>
+
+            <label for="Commentaire">Commentaire</label>
+            <textarea name="Commentaire" rows="10" required></textarea>
+
+            <div>
+                <button type="submit">Envoyer</button>
+                <button type="reset">Remettre a Zero</button>
+            </div>
+        </form>
+    </body>
+</html>
